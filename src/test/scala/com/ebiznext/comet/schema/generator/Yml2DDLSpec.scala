@@ -41,6 +41,7 @@ class Yml2DDLSpec extends TestHelper {
     logger.debug(binder.getLoggerFactory.toString)
     logger.debug(binder.getLoggerFactoryClassStr)
 
+    System.setProperty("java.io.tmpdir", "/tmp")
     new WithSettings() {
       new SpecTrait(
         domainOrJobFilename = "position.comet.yml",

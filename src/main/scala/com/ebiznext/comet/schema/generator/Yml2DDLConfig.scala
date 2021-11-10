@@ -43,7 +43,7 @@ object Yml2DDLConfig extends CliConfig[Yml2DDLConfig] {
       opt[String]("datawarehouse")
         .action((x, c) => c.copy(datawarehouse = x))
         .required()
-        .text("target datawarehouse name (ddl mapping key in types.yml"),
+        .text("target datawarehouse name (ddl mapping key in types.yml)"),
       opt[String]("connection")
         .action((x, c) => c.copy(connection = Some(x)))
         .optional()

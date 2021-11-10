@@ -1,4 +1,4 @@
 <%@ val domain: String %>
 <%@ val schema: String %>
 
-drop table  ${domain}.${schema};
+drop table ${domain}.${schema};

@@ -7,7 +7,7 @@ load:
     sink:
       type: ${sink_type}
   schemas:
-    - name: "sellers"
+    - name: "SELLERS"
       pattern: "sellers-.*.json"
       primaryKey:
         - id

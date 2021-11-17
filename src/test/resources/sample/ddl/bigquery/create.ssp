@@ -33,19 +33,6 @@
     }
 %>
 
-
-#if (isPrimaryKeyDefined)
-    #for (primaryKey <- primaryKeys)
-        ${primaryKey}
-    #end
-#end
-
-#if (isPartitionDefined)
-    #for (partition <- partitions)
-        ${partition}
-    #end
-#end
-
 CREATE TABLE ${domain}.${schema} (
 #{
     val attributesCount = attributes.length

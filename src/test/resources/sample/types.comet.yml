@@ -9,6 +9,7 @@ types:
       sql:
       bigquery: TIMESTAMP
       snowflake: TIMESTAMP
+      postgres: varchar(255)
   - name: time
     pattern: "(1[012]|[1-9]):[0-5][0-9](\\\\s)?(?i)(am|pm)"
     primitiveType: "string"
@@ -16,6 +17,7 @@ types:
       sql:
       bigquery: STRING
       snowflake: STRING
+      postgres: varchar(255)
   - name: time24
     pattern: "([01]?[0-9]|2[0-3]):[0-5][0-9]"
     primitiveType: "string"
@@ -23,6 +25,7 @@ types:
       sql:
       bigquery: STRING
       snowflake: STRING
+      postgres: varchar(255)
   - name: username
     pattern: "[a-z0-9_-]{3,15}"
     primitiveType: "string"
@@ -30,6 +33,7 @@ types:
       sql:
       bigquery: STRING
       snowflake: STRING
+      postgres: varchar(255)
   - name: datefr
     primitiveType: "date"
     pattern: "dd.MM.yyyy"
@@ -39,6 +43,7 @@ types:
       sql:
       bigquery: DATE
       snowflake: DATE
+      postgres: DATE
   - name: email
     primitiveType: string
     pattern: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
@@ -48,6 +53,7 @@ types:
       sql:
       bigquery: STRING
       snowflake: STRING
+      postgres: varchar(255)
   - name: date_fr
     primitiveType: date
     pattern: "dd/MM/yyyy"
@@ -57,6 +63,7 @@ types:
       sql:
       bigquery: DATE
       snowflake: DATE
+      postgres: DATE
   - name: date_fr2
     primitiveType: date
     pattern: "dd.MM.yyyy"
@@ -66,6 +73,7 @@ types:
       sql:
       bigquery: DATE
       snowflake: DATE
+      postgres: DATE
   - name: "epoch_second"
     primitiveType: "timestamp"
     pattern: "epoch_second"
@@ -75,6 +83,7 @@ types:
       sql:
       bigquery: TIMESTAMP
       snowflake: TIMESTAMP
+      postgres: TIMESTAMP
   - name: "epoch_milli"
     primitiveType: "timestamp"
     pattern: "epoch_milli"
@@ -84,3 +93,4 @@ types:
       sql:
       bigquery: TIMESTAMP
       snowflake: TIMESTAMP
+      postgres: TIMESTAMP

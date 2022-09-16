@@ -1,0 +1,52 @@
+load:
+  name: "domain"
+  directory: "${root_path}/incoming/DOMAIN"
+  metadata:
+    mode: "FILE"
+    format: "DSV"
+    withHeader: false
+    separator: ";"
+    quote: "\""
+    escape: "\\"
+    write: "APPEND"
+    partition:
+      attributes:
+        - comet_year
+        - comet_month
+        - comet_day
+  schemas:
+    - name: "user"
+      pattern: "SCHEMA-.*.dsv"
+      attributes:
+        - name: "firstname"
+          type: "string"
+          required: false
+          privacy: "NONE"
+        - name: "lastname"
+          type: "string"
+          required: false
+          privacy: "HIDE"
+        - name: "age"
+          type: "int"
+          required: false
+          privacy: "NONE"
+        - name: "test"
+          type: "struct"
+          attributes:
+            - name: "road_number"
+              type: "int"
+            - name: "road_name"
+              type: "string"
+            - name: "owners"
+              type: "string"
+            - name: "cc"
+              type: "long"
+
+      metadata:
+        mode: "FILE"
+        format: "DSV"
+        withHeader: true
+        separator: ";"
+        quote: "\""
+        escape: "\\"
+        write: "APPEND"

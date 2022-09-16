@@ -124,6 +124,21 @@ trait TestHelper
       "create.ssp",
       "/sample/ddl/bigquery/create.ssp",
       Some("ddl/bigquery")
+    ),
+    FileToImport(
+      "create.ssp",
+      "/sample/ddl/postgres/create.ssp",
+      Some("ddl/postgres")
+    ),
+    FileToImport(
+      "drop.ssp",
+      "/sample/ddl/postgres/drop.ssp",
+      Some("ddl/postgres")
+    ),
+    FileToImport(
+      "alter.ssp",
+      "/sample/ddl/postgres/alter.ssp",
+      Some("ddl/postgres")
     )
   )
 
